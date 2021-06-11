@@ -2,6 +2,8 @@ import './CardsField.css';
 import { BaseComponent } from '../BaseComponent';
 import { Card } from '../Card/Card';
 
+const SHOW_CARDS_IN = 5000;
+
 export class CardsField extends BaseComponent {
   private cards: Card[] = [];
 
@@ -19,6 +21,6 @@ export class CardsField extends BaseComponent {
     this.cards.forEach((card) => this.element.appendChild(card.element));
     setTimeout(() => {
       this.cards.forEach((card) => card.flipToBack());
-    }, 5000);
+    }, SHOW_CARDS_IN);
   }
 }

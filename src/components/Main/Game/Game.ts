@@ -26,13 +26,15 @@ export const Game = () => {
     gameContent,
   ];
 
+  const ACTIVE_PAGE = 'active';
+
   const deleteActive = () => {
-    arrayContents.forEach((page) => page?.classList.remove('active'));
+    arrayContents.forEach((page) => page?.classList.remove(ACTIVE_PAGE));
   };
 
   const routerExpress = (content: Element | null, button: Element | null) => {
     deleteActive();
-    content?.classList.add('active');
+    content?.classList.add(ACTIVE_PAGE);
   };
 
   routerExpress(gameContent, null);

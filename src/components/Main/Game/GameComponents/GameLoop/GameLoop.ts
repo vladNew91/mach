@@ -3,6 +3,11 @@ import { BaseComponent } from '../BaseComponent';
 import { Card } from '../Card/Card';
 import { CardsField } from '../CardsField/CardsField';
 
+//  get random number from -0.5 to 0.5
+const GET_RANDOM_NUMBER = () => Math.random() - 0.5;
+
+const TIME_TO_FLIP = 2000;
+
 export class GameLoop extends BaseComponent {
   private readonly cardsField: CardsField;
   private activeCard?: Card;
@@ -19,7 +24,7 @@ export class GameLoop extends BaseComponent {
     const cards = images
       .concat(images)
       .map((url) => new Card(url))
-      .sort(() => Math.random() - 0.5);
+      .sort(GET_RANDOM_NUMBER);
 
     cards.forEach((card) =>
       card.element.addEventListener('click', () => this.cardHandler(card))
@@ -42,7 +47,7 @@ export class GameLoop extends BaseComponent {
     }
 
     if (this.activeCard.image != card.image) {
-      await Delay(2000);
+      await Delay(TIME_TO_FLIP);
       await Promise.all([this.activeCard.flipToBack(), card.flipToBack()]);
     }
     this.activeCard = undefined;
