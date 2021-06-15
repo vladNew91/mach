@@ -1,0 +1,82 @@
+.about-container {
+  width: 1000px;
+  height: 802px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin: 33px auto;
+  padding: 28px 36px;
+  box-sizing: border-box;
+  display: none;
+  flex-direction: row;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  margin-right: 90px;
+}
+
+.left-content {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.15px;
+  font-weight: 500;
+}
+
+.step {
+  background: #ffffff;
+  margin-top: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.first {
+  height: 230px;
+}
+
+.second {
+  height: 132px;
+}
+
+.third {
+  height: 240px;
+}
+
+.right-content {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.first-img {
+  width: 302px;
+  height: 218px;
+  background: url('../../../../assets/reg-example.png');
+  margin-top: 50px;
+  background-size: contain;
+}
+
+.second-img {
+  width: 108px;
+  height: 73px;
+  background: url('../../../../assets/settings.png');
+  margin-top: 50px;
+}
+
+.third-img {
+  width: 100%;
+  height: 240px;
+  background: url('../../../../assets/image 4.jpg');
+  margin-top: 60px;
+}
+
+.active {
+  display: flex;
+}

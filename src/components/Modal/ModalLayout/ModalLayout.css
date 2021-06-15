@@ -1,0 +1,167 @@
+.modal {
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 0.3s;
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+}
+
+.modal-1,
+.modal-amount-money {
+  box-sizing: border-box;
+  border: 1px solid #9ca498;
+}
+
+.modal-1 {
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.3s;
+  animation-name: slideIn;
+  animation-duration: 0.3s;
+}
+
+.modal-1 {
+  display: flex;
+  flex-direction: column;
+  width: 639px;
+  height: 460px;
+  font-size: 16px;
+  line-height: 19px;
+  background: #ffffff;
+  position: relative;
+  border: none;
+}
+
+.modal-header {
+  width: 100%;
+  height: 67px;
+  top: 0;
+  border: none;
+}
+
+.modal-content {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0;
+  position: relative;
+}
+
+.player-info {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-info__item {
+  width: auto;
+  height: 50px;
+}
+
+.player-modal-icon {
+  width: 50%;
+  height: max-content;
+  background: url('../../../assets/Ellipse\ 5.png');
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form-btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25%;
+}
+
+.btn-form {
+  width: 20%;
+  margin-right: 3%;
+}
+
+.form-control,
+.form-tooltip,
+.form-tooltip-email {
+  border: 1px solid rgb(124, 15, 15);
+  box-shadow: 0 0 0 0.25rem rgb(124 15 15 / 25%);
+}
+
+.valid {
+  border-color: #86b7fe;
+  box-shadow: none;
+}
+
+.form-tooltip,
+.form-tooltip-email {
+  display: none;
+  width: max-content;
+  height: auto;
+  position: absolute;
+  left: 36px;
+  bottom: -14px;
+  background: #ffff;
+}
+
+.form-tooltip-email {
+  bottom: -100px;
+}
+
+.show {
+  display: flex;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
